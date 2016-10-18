@@ -1,0 +1,61 @@
+            
+                RELEASE HISTORY OF ebdbNet PACKAGE
+             ========================================
+
+		CHANGES IN ebdbNet VERSION 1.2.3
+
+Changes:
+- Fixed small bug in dataFormat and plotting functions. Many thanks to Slemain Bassim for pointing out these bugs!
+- Update dependencies to replace igraph0 with igraph.
+
+
+		CHANGES IN ebdbNet VERSION 1.2.2
+
+Changes:
+- Dependencies to the igraph package were switched over to the compatability version igraph0.
+- Fixed bug in R code and bug in C code (line 2478) that caused memory crashes when the number of inputs was greater 
+  than the number of genes. Many thanks to A. Baeza for pointing out this bug!
+- Small changes made to plot.ebdbNet function to allow variable names to be graphed directly and to clarify 
+  presentation of results.
+
+		CHANGES IN ebdbNet VERSION 1.2.1
+
+Changes:
+- Author and maintainer contact information were updated.
+- Citation information was added, as well as a NAMESPACE file.
+- Creation of S3 class 'ebdbNet'.
+- sumFunc and fdbkFunc have become an internal functions (.sumFunc and .fdbkFunc) with documentation moved to the
+  ebdbn-internal documentation page. 
+- The function sensitivity has been renamed calcSensSpec, and the function simFunc has been renamed simulateVAR. 
+- The zCutoff function has been folded into the ebdbn function, and users may now calculate adjacency matrices
+  corresponding to arbitrary significance levels (not just 95%, 99%, and 99.9%).
+- The visualize function has been replaced with plot.ebdbNet, and the format of this function has changed slightly.
+  In particular, we make use of the igraph function (which ebdbNet now depends on); this function allows
+  either interactive or static plotting.
+
+   		CHANGES IN ebdbNet VERSION 1.2
+
+Changes:
+- Author and maintainer contact information were updated.
+- References to the "Rgraphviz" package in the visualize function have been removed, 
+  as this package has been removed from the CRAN repository. In addition, Rgraphviz was
+  removed from the Suggests list for packages in the DESCRIPTION file of ebdbNet. 
+
+   		CHANGES IN ebdbNet VERSION 1.1
+
+Changes:
+- The licence was changed from "GNU" to "GNU GPL 3 or later".
+- Functions data.format and visualize were added to format longitudinal data and graph results, respectively.
+- The Rgraphviz library was added to the list of suggested packages.
+- Some parts of the documentation were updated.
+- Small bugs in the C source code were fixed.
+- Code was adjusted to allow the incorporation of arbitrary driving inputs in addition to feedback from 
+  previous time points.
+
+Newly added:
+- Graphing capabilities using the graphviz package.
+
+
+		CHANGES in ebdbNet VERSION 1.0
+
+This is the first release (11 November 2009).
