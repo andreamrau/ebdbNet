@@ -2,6 +2,10 @@
                 RELEASE HISTORY OF ebdbNet PACKAGE
              ========================================
 
+		CHANGES IN ebdbNet VERSION 1.2.4
+
+- Fixed small typo in CITATION file, updated imports in NAMESPACE
+					
 		CHANGES IN ebdbNet VERSION 1.2.3
 
 Changes:

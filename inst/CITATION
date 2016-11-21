@@ -1,4 +1,4 @@
-citHeader("To cite the R package 'ebdbn' in publications use:")  
+citHeader("To cite the R package 'ebdbNet' in publications use:")  
 
 citEntry(entry   = "Article",
          title   = "An empirical Bayesian method for estimating biological networks from temporal microarray data",
