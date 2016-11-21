@@ -13,7 +13,7 @@ empirical Bayes estimation procedure based on Dynamic Bayesian Networks.
 \tabular{ll}{
 Package: \tab ebdbNet\cr
 Type: \tab Package\cr
-Version: \tab 1.2.4\cr
+Version: \tab 1.2.5\cr
 Date: \tab 2016-11-21\cr
 License: \tab GPL (version 3 or later)\cr
 LazyLoad: \tab yes\cr

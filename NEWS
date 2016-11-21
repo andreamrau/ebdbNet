@@ -2,9 +2,9 @@
                 RELEASE HISTORY OF ebdbNet PACKAGE
              ========================================
 
-		CHANGES IN ebdbNet VERSION 1.2.4
+		CHANGES IN ebdbNet VERSION 1.2.4-1.2.5
 
-- Fixed small typo in CITATION file, updated imports in NAMESPACE
+- Fixed small typo in CITATION file, updated imports in NAMESPACE, updated webpage
 					
 		CHANGES IN ebdbNet VERSION 1.2.3
 
