@@ -1,4 +1,6 @@
 /* $Id$ */
+#define USE_FC_LEN_T
+#include <Rconfig.h> 
 #include <stdlib.h>
 #include <stddef.h>
 #include <time.h>
@@ -10,6 +12,9 @@
 #include <Rdefines.h>
 #include <R_ext/Lapack.h>
 #include <R_ext/BLAS.h>
+#ifndef FCONE
+# define FCONE
+#endif
 /* Load global subprograms */
 void MatrixInv(double**, int, double**, double*);
 void MatrixMult(double**, int, int, double**, int, double**);
@@ -3026,11 +3031,11 @@ void MatrixInv(double **mat, int n, double **invmat, double *det)
 	for(i=0; i<n; i++) for(j=0; j<n; j++) *(fvect+(j+i*n)) = *(*(mat+j)+i);
 
 	/* Singular value decomposition using LAPACK function */
-	F77_CALL(dgesvd)(&jobu,&jobvt,&m,&m,fvect,&m,w,u2,&m,vt,&m,work,&lwork,&info);
+	F77_CALL(dgesvd)(&jobu,&jobvt,&m,&m,fvect,&m,w,u2,&m,vt,&m,work,&lwork,&info FCONE FCONE);
 	lwork = *work;
 	free(work);
 	work = (double*) calloc(lwork, sizeof(double));
-	F77_CALL(dgesvd)(&jobu,&jobvt,&m,&m,fvect,&m,w,u2,&m,vt,&m,work,&lwork,&info);
+	F77_CALL(dgesvd)(&jobu,&jobvt,&m,&m,fvect,&m,w,u2,&m,vt,&m,work,&lwork,&info FCONE FCONE);
 
 	/* Convert U and V to matrix form */
 	for(i=0; i<n; i++) for(j=0; j<n; j++) *(*(u+j)+i)=*(u2+(j+i*n));
@@ -3083,7 +3088,7 @@ void MatrixMult(double **m1, int m1r, int m1c, double **m2,
 	for(i=0; i<m2c; i++) for(j=0; j<m1c; j++) *(B+(i*m1c+j))=*(*(m2+j)+i);
 
 	/* Call BLAS function */
-	F77_CALL(dgemm)(&transa, &transb, &m1r, &m2c, &m1c, &alph, A, &m1r, B, &m1c, &bta, C, &m1r);
+	F77_CALL(dgemm)(&transa, &transb, &m1r, &m2c, &m1c, &alph, A, &m1r, B, &m1c, &bta, C, &m1r FCONE FCONE);
 
 	/* set the solution as a matrix */
 	for(i=0; i<m2c; i++) for(j=0; j<m1r; j++) *(*(sol+j)+i) = *(C+(i*m1r+j));
@@ -3130,3 +3135,5 @@ void MatrixTrans(double **m, double **mt, int *row, int *col)
 #ifdef win32
             R_FlushConsole();
 #endif
+
+  

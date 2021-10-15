@@ -2,6 +2,14 @@
                 RELEASE HISTORY OF ebdbNet PACKAGE
              ========================================
 
+		CHANGES IN ebdbNet VERSION 1.2.6
+
+- Define USE_FC_LEN_T in the C source code and include Rconfig.h 
+(to correspond to code produced by compiler gfortran >= 7)
+- Pass character length(s) from C to Fortran by defining FCONE and 
+including it in the F77_CALL (https://cran.r-project.org/doc/manuals/r-devel/R-exts.html#Fortran-character-strings)
+- Convert package to use registration (https://cran.r-project.org/doc/manuals/r-release/R-exts.html#Writing-portable-packages) wth new init.c file
+
 		CHANGES IN ebdbNet VERSION 1.2.4-1.2.5
 
 - Fixed small typo in CITATION file, updated imports in NAMESPACE, updated webpage
