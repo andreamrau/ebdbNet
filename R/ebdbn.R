@@ -60,7 +60,7 @@ function(y, K, input = "feedback", conv.1 = .15, conv.2 = .05, conv.3 = .01, ver
 	verboseInd <- ifelse(verbose == TRUE, 1, 0)
 
 	## Run Full Algorithm and Find Posterior Mean and Variance
-	test = .C("RunWrapGen", R = as.integer(R), P = as.integer(P),
+	test = .C(C_RunWrapGen, R = as.integer(R), P = as.integer(P),
 		T = as.integer(T), K = as.integer(K), M = as.integer(M), xx = as.double(x0),
 		yy = as.double(yorig), uu = as.double(uorig), alpha = as.double(alpha.0),
 		beta = as.double(beta.0), gamma = as.double(gamma.0),
@@ -73,20 +73,6 @@ function(y, K, input = "feedback", conv.1 = .15, conv.2 = .05, conv.3 = .01, ver
 		DvarPost = as.double(DvarPost), alliterations = as.integer(0),
 		maxiterations = as.integer(max.iter), subiterations = as.integer(max.subiter),
 		verboseInd = as.integer(verboseInd), PACKAGE = "ebdbNet")
-	
-	# test = .C(C_RunWrapGen, R = as.integer(R), P = as.integer(P), 
-	#           T = as.integer(T), K = as.integer(K), M = as.integer(M), xx = as.double(x0), 
-	#           yy = as.double(yorig), uu = as.double(uorig), alpha = as.double(alpha.0), 
-	#           beta = as.double(beta.0), gamma = as.double(gamma.0), 
-	#           delta = as.double(delta.0), v = as.double(v.0),
-	#           mu = as.double(mu.0), sigma = as.double(sigma.0),
-	#           conv1 = as.double(conv.1), conv2 = as.double(conv.2),
-	#           conv3 = as.double(conv.3), APost = as.double(APost),
-	#           BPost = as.double(BPost), CPost = as.double(CPost),
-	#           DPost = as.double(DPost), CvarPost = as.double(CvarPost),
-	#           DvarPost = as.double(DvarPost), alliterations = as.integer(0), 
-	#           maxiterations = as.integer(max.iter), subiterations = as.integer(max.subiter), 
-	#           verboseInd = as.integer(verboseInd))
 
 	## Estimated Posterior Mean and Variance
 

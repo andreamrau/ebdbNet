@@ -3,7 +3,7 @@ function (x, sig.level, interactive = "FALSE", clarify = "TRUE",
 	layout = layout.fruchterman.reingold, ...) 
 {
 	ebdbn <- x
-    	if (class(ebdbn) != "ebdbNet") {
+    	if (is(ebdbn, "ebdbNet")) {
         	stop("Error: ", paste(sQuote("ebdbn"), sep = ""), " must be of class ", 
             paste(dQuote("ebdbNet"), sep = ""), sep = "")
     	}
