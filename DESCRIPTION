@@ -3,8 +3,8 @@ Type: Package
 Title: Empirical Bayes Estimation of Dynamic Bayesian Networks
 Version: 1.2.7
 Date: 2023-03-27
-Author: Andrea Rau <andrea.rau@inrae.fr>
-Maintainer: Andrea Rau <andrea.rau@inrae.fr>
+Author: Andrea Rau <andrea.rau@inra.fr>
+Maintainer: Andrea Rau <andrea.rau@inra.fr>
 Depends: R (>= 4.1.0), igraph
 Imports: graphics, stats, methods
 Suggests: GeneNet

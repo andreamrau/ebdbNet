@@ -2,6 +2,11 @@
                 RELEASE HISTORY OF ebdbNet PACKAGE
              ========================================
 
+		CHANGES IN ebdbNet VERSION 1.2.7
+
+- Removed foreign function calls with character strings 
+
+
 		CHANGES IN ebdbNet VERSION 1.2.6
 
 - Define USE_FC_LEN_T in the C source code and include Rconfig.h 
@@ -70,4 +75,6 @@ Newly added:
 
 		CHANGES in ebdbNet VERSION 1.0
 
-This is the first release (11 November 2009).
+Changes:
+- This is the first release (11 November 2009).
+

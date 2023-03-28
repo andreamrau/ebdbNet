@@ -1,14 +1,13 @@
 citHeader("To cite the R package 'ebdbNet' in publications use:")  
 
-citEntry(entry   = "Article",
+bibentry(bibtype   = "Article",
          title   = "An empirical Bayesian method for estimating biological networks from temporal microarray data",
          journal = "Statistical Applications in Genetics and Molecular Biology",
          volume  = "9",
          number  = "1",
          year    = "2010",
-         author  = personList(
+         author  = c(
            person(given="Andrea", family="Rau"),
            person(given="Florence", family="Jaffrezic"),
            person(given="Jean-Louis", family="Foulley"),
-           person(given="Rebecca", family="Doerge")),
-         textVersion = "A. Rau, F. Jaffrezic, J.-L. Foulley, R. W. Doerge (2010). An empirical Bayesian method for estimating biological networks from temporal microarray data. Statistical Applications in Genetics and Molecular Biology, vol. 9, iss. 1, article 9.")
+           person(given="Rebecca", family="Doerge")))
