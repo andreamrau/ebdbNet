@@ -2,9 +2,10 @@
                 RELEASE HISTORY OF ebdbNet PACKAGE
              ========================================
 
-		CHANGES IN ebdbNet VERSION 1.2.7
+		CHANGES IN ebdbNet VERSION 1.2.7-1.2.8
 
 - Removed foreign function calls with character strings 
+- Removed metadata from ebdbNet package overview help file
 
 
 		CHANGES IN ebdbNet VERSION 1.2.6

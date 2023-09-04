@@ -10,14 +10,6 @@ This package is used to infer the adjacency matrix of a network from time course
 empirical Bayes estimation procedure based on Dynamic Bayesian Networks.
 }
 \details{
-\tabular{ll}{
-Package: \tab ebdbNet\cr
-Type: \tab Package\cr
-Version: \tab 1.2.5\cr
-Date: \tab 2016-11-21\cr
-License: \tab GPL (version 3 or later)\cr
-LazyLoad: \tab yes\cr
-}
 Posterior distributions (mean and variance) of network parameters are estimated using time-course
 data based on a linear feedback state space model that allows for a set of hidden states to be incorporated.
 The algorithm is composed of three principal parts: choice of hidden state dimension
