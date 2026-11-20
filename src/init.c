@@ -2,9 +2,13 @@
 #include <R_ext/Rdynload.h>
 #include <Rinternals.h>
 
-extern SEXP RunWrapGen(SEXP, SEXP, SEXP, SEXP, SEXP, SEXP, SEXP, SEXP, SEXP, 
-                       SEXP, SEXP, SEXP, SEXP, SEXP, SEXP, SEXP, SEXP, SEXP, 
-                       SEXP, SEXP,SEXP, SEXP, SEXP, SEXP, SEXP,SEXP, SEXP, SEXP);
+extern void RunWrapGen(int *, int *, int *, int *, int *, double *,
+                       double *, double *, double *, double *, double *,
+                       double *, double *, double *, double *,
+                       double *, double *, double *,
+                       double *, double *, double *, double *,
+                       double *, double *, int *, int *,
+                       int *, int *);
   
 #define CALLDEF(name, n)  {#name, (DL_FUNC) &name, n}
 /*  Convert package to use registration */
